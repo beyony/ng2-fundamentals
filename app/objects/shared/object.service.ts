@@ -9,24 +9,24 @@ export class ObjectService implements OnInit {
     constructor(private http: HttpClient) {}
 
     ngOnInit() {
-        // this.http.get('/api/items').subscribe(data => {
-        //     console.log("DATAAAAAAAAAA:");
-        //     console.log(data);
-        //     this.objects = data;
-        // });
+        console.log("ObjectService ngOnInit");
+
+        this.http.get('http://localhost:8080/api/objects').subscribe(data => {
+            console.log("DATAAAAAAAAAA:");
+            console.log(data);
+            this.objects = data;
+        });
     }
 
 
     getObjects() {
-        // return this.http.get('http://localhost:8080/api/objects').map((response: Response) => {
-        //     console.log("!!!!!!!!!!!!!!!!!");
-        //     console.log(response.json());
-        //     return response.json();
-        // });
-        // return EVENTS;
+        this.http.get('http://localhost:8080/api/objects').subscribe(data => {
+            console.log("DATAAAAAAAAAA:");
+            console.log(data);
+            this.objects = data;
+        });
 
-
-
+         return EVENTS;
     }
 
     getObject(id: Number) {

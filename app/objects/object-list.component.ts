@@ -20,7 +20,7 @@ export class ObjectsListComponent implements OnInit {
 
     ngOnInit() { // don't do long term processes in the constructor -> use ngOnInit instead!
         this.objects = this.objectService.getObjects();
-        console.log(this.objectService.getObjects());
+        // console.log(this.objectService.getObjects());
     }
 
     handleThumbnailClick(objectName) {
