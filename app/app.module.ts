@@ -2,13 +2,13 @@ import {NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import {RouterModule} from "@angular/router";
 
-import {EventsAppComponent} from "./events-app.component";
-import {EventsListComponent} from "./events/events-list.component";
-import {EventThumbnailComponent} from "./events/event-thumbnail.component";
+import {ObjectsAppComponent} from "./object-app.component";
+import {ObjectsListComponent} from "./objects/object-list.component";
+import {ObjectThumbnailComponent} from "./objects/object-thumbnail.component";
 import {NavBarComponent} from "./nav/navbar.component";
-import {EventService} from "./events/shared/event.service";
+import {ObjectService} from "./objects/shared/object.service";
 import {ToastrService} from "./common/toastr.service";
-import {EventDetailsComponent} from "./events/event-details/event.details.component";
+import {ObjectDetailsComponent} from "./objects/object-details/object.details.component";
 import {appRoutes} from "./routes";
 
 @NgModule({
@@ -17,17 +17,17 @@ import {appRoutes} from "./routes";
         RouterModule.forRoot(appRoutes)
     ],
     declarations: [
-        EventsAppComponent,
-        EventsListComponent,
-        EventThumbnailComponent,
+        ObjectsAppComponent,
+        ObjectsListComponent,
+        ObjectThumbnailComponent,
         NavBarComponent,
-        EventDetailsComponent
+        ObjectDetailsComponent
     ],
     providers: [
-        EventService,
+        ObjectService,
         ToastrService
     ],
-    bootstrap: [EventsAppComponent]
+    bootstrap: [ObjectsAppComponent]
 })
 export class AppModule {
 
