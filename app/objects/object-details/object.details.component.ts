@@ -12,7 +12,7 @@ import {ActivatedRoute} from "@angular/router";
     styles: [
         `
             .container { padding-left: 20px; padding-right: 20px; }
-            .event-image { height: 100px; }
+            .object-image { height: 100px; }
         `
     ]
 })

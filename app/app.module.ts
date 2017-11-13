@@ -11,6 +11,7 @@ import {ToastrService} from "./common/toastr.service";
 import {ObjectDetailsComponent} from "./objects/object-details/object.details.component";
 import {appRoutes} from "./routes";
 
+
 @NgModule({
     imports: [
         BrowserModule,
