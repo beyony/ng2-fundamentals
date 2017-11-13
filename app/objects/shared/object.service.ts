@@ -1,11 +1,32 @@
-import {Injectable} from "@angular/core";
+import {Injectable, OnInit} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable()
-export class ObjectService {
+export class ObjectService implements OnInit {
+
+    objects: any;
+
+    constructor(private http: HttpClient) {}
+
+    ngOnInit() {
+        // this.http.get('/api/items').subscribe(data => {
+        //     console.log("DATAAAAAAAAAA:");
+        //     console.log(data);
+        //     this.objects = data;
+        // });
+    }
 
 
     getObjects() {
-        return EVENTS;
+        // return this.http.get('http://localhost:8080/api/objects').map((response: Response) => {
+        //     console.log("!!!!!!!!!!!!!!!!!");
+        //     console.log(response.json());
+        //     return response.json();
+        // });
+        // return EVENTS;
+
+
+
     }
 
     getObject(id: Number) {
