@@ -7,8 +7,9 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a [routerLink]="['/objects']" routerLinkActive="active" routerLinkActiveOptions="{exact: true}">All
-                        Objects</a>
+                    <a [routerLink]="['/objects']" routerLinkActive="active"
+                       [routerLinkActiveOptions]="{exact:true}">
+                        All Objects</a>
                 </li>
                 <li><a [routerLink]="['/objects/new']" routerLinkActive="active">Create Object</a></li>
                 <li class="dropdown">
