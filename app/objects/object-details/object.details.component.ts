@@ -10,9 +10,15 @@ import {ActivatedRoute} from "@angular/router";
 @Component({
     templateUrl: '/app/objects/object-details/object-details.component.html',
     styles: [
-        `
-            .container { padding-left: 20px; padding-right: 20px; }
-            .object-image { height: 100px; }
+            `
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .object-image {
+                height: 100px;
+            }
         `
     ]
 })
@@ -20,10 +26,13 @@ export class ObjectDetailsComponent implements OnInit {
 
     object: any;
 
-    constructor(private objectService:ObjectService, private route: ActivatedRoute) {}
+    constructor(private objectService: ObjectService, private route: ActivatedRoute) {
+    }
 
     ngOnInit() {
-        this.object = this.objectService.getObject(this.route.snapshot.params['id']);
+        this.objectService.getObject(this.route.snapshot.params['id']).subscribe(object => {
+            this.object = object;
+        });
     }
 
 }

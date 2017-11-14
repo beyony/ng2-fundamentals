@@ -22,6 +22,7 @@ export class ObjectService {
     getObject(id: String) {
         let subject = new Subject();
         this.http.get('http://localhost:8080/api/object/' + id).subscribe(data => {
+            console.log(data);
             subject.next(data);
             subject.complete();
         });
