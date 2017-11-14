@@ -23,7 +23,7 @@ export class ObjectDetailsComponent implements OnInit {
     constructor(private objectService:ObjectService, private route: ActivatedRoute) {}
 
     ngOnInit() {
-        this.object = this.objectService.getObject(+this.route.snapshot.params['id']);
+        this.object = this.objectService.getObject(this.route.snapshot.params['id']);
     }
 
 }

@@ -8,8 +8,8 @@ import {ToastrService} from "../common/toastr.service";
         <div>
             <h1>All Objects</h1>
             <hr>
-            <object-thumbnail (click)="handleThumbnailClick(object.name)" *ngFor="let object of objects"
-                             [object]="object"></object-thumbnail>
+            <object-thumbnail *ngFor="let object of objects"
+                              [object]="object"></object-thumbnail>
         </div>`
 })
 export class ObjectsListComponent implements OnInit {
@@ -18,13 +18,11 @@ export class ObjectsListComponent implements OnInit {
     constructor(private objectService: ObjectService, private toastrService: ToastrService) {
     }
 
-    ngOnInit() { // don't do long term processes in the constructor -> use ngOnInit instead!
-        this.objects = this.objectService.getObjects();
-        // console.log(this.objectService.getObjects());
-    }
-
-    handleThumbnailClick(objectName) {
-        this.toastrService.error(objectName, "foo");
+    // don't do long term processes in the constructor -> use ngOnInit instead!
+    ngOnInit() {
+        this.objectService.getObjects().subscribe(objects => {
+            this.objects = objects;
+        });
     }
 
 }

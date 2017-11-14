@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import {RouterModule} from "@angular/router";
-// import {Observable,Subject} from "rxjs/Rx";
 import {HttpClientModule} from '@angular/common/http';
 
+import {appRoutes} from "./routes";
 import {ObjectsAppComponent} from "./object-app.component";
 import {ObjectsListComponent} from "./objects/object-list.component";
 import {ObjectThumbnailComponent} from "./objects/object-thumbnail.component";
@@ -11,7 +11,8 @@ import {NavBarComponent} from "./nav/navbar.component";
 import {ObjectService} from "./objects/shared/object.service";
 import {ToastrService} from "./common/toastr.service";
 import {ObjectDetailsComponent} from "./objects/object-details/object.details.component";
-import {appRoutes} from "./routes";
+import {CreateObjectComponent} from "./objects/create-object.component";
+import {Error404Component} from "./errors/404.component";
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import {appRoutes} from "./routes";
         ObjectsListComponent,
         ObjectThumbnailComponent,
         NavBarComponent,
-        ObjectDetailsComponent
+        ObjectDetailsComponent,
+        CreateObjectComponent,
+        Error404Component
     ],
     providers: [
         ObjectService,

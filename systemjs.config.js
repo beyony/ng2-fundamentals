@@ -39,9 +39,6 @@
             rxjs: {
                 defaultExtension: 'js'
             }
-            // ,tslib: {
-            //     defaultExtension: 'js'
-            // }
         }
     });
 })(this);
