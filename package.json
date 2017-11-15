@@ -20,10 +20,13 @@
     "@angular/platform-browser-dynamic": "^4.3.0",
     "@angular/router": "^4.3.0",
     "core-js": "2.4.1",
+    "font-awesome": "^4.7.0",
     "ng2f-bootstrap": "^0.0.4",
     "ng2f-server": "^0.2.3",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
+    "three": "^0.88.0",
+    "three-orbit-controls": "^82.1.0",
     "toastr": "^2.1.2",
     "tslib": "^1.8.0",
     "zone.js": "0.8.4"

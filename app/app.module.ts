@@ -11,8 +11,9 @@ import {NavBarComponent} from "./nav/navbar.component";
 import {ObjectService} from "./objects/shared/object.service";
 import {ToastrService} from "./common/toastr.service";
 import {ObjectDetailsComponent} from "./objects/object-details/object.details.component";
-import {CreateObjectComponent} from "./objects/create-object.component";
+import {CreateObjectComponent} from "./objects/object-create/create-object.component";
 import {Error404Component} from "./errors/404.component";
+import {ThreeService} from "./canvas/three.service";
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {Error404Component} from "./errors/404.component";
     ],
     providers: [
         ObjectService,
-        ToastrService
+        ToastrService,
+        ThreeService
     ],
     bootstrap: [ObjectsAppComponent]
 })

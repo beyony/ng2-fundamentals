@@ -1,7 +1,7 @@
 import {Routes} from "@angular/router";
 import {ObjectsListComponent} from "./objects/object-list.component";
 import {ObjectDetailsComponent} from "./objects/object-details/object.details.component";
-import {CreateObjectComponent} from "./objects/create-object.component";
+import {CreateObjectComponent} from "./objects/object-create/create-object.component";
 import {Error404Component} from "./errors/404.component";
 
 

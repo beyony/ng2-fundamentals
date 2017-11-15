@@ -1,0 +1,51 @@
+<div id="exTab1" class="container" [class.scaleMax]="scaleMax">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a (click)="tabChange(1)" href="#1a" data-toggle="tab">Object Data</a>
+        </li>
+        <li>
+            <a (click)="tabChange(2)" href="#2a" data-toggle="tab">Object 3D</a>
+        </li>
+        <li>
+            <a (click)="tabChange(3)" href="#3a" data-toggle="tab">Object 2D</a>
+        </li>
+        <li class="panel">
+            <i [hidden]="scaleMax" class="fa fa-arrows-alt" aria-hidden="true" (click)="toggleScale()"></i>
+            <i [hidden]="!scaleMax" class="fa fa-window-close-o" aria-hidden="true" (click)="toggleScale()"></i>
+        </li>
+    </ul>
+
+    <div id="mainContainer" class="tab-content-container">
+        <div class="tab-content clearfix">
+            <div class="tab-pane active" id="1a">
+                <form>
+                    <div class="form-row">
+                        <label for="inputName">Name</label>
+                        <input id="inputName" class="form-control" type="text">
+                    </div>
+                    <div class="form-row">
+                        <label for="inputDescription">Description</label>
+                        <input id="inputDescription" class="form-control" type="text">
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane" id="2a">
+                <canvas id="canvas"></canvas>
+                <div style="right: 0" class="col-md-6">
+                    <button type="button" class="btn btn-default" (click)="animationStart()">start</button>
+                    <button type="button" class="btn btn-default" (click)="animationPause()">pause</button>
+                </div>
+            </div>
+            <div class="tab-pane" id="3a">
+                <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+
+</div>
+
+
